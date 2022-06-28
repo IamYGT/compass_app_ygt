@@ -1,17 +1,19 @@
-import 'package:compass_app_ygt/utilies/Texts.dart';
+import 'package:compass_app_ygt/utilies/texts.dart';
 import 'package:compass_app_ygt/utilies/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 
+import '../utilies/text_styles.dart';
+
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+ const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  double? heading;
+  double? heading = -0;
   @override
   void initState() {
     super.initState();
@@ -27,7 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: TextsYGT.homeScreenAppBarTitle,
       ),
-      // body: ,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            '${heading!.ceil()}',
+            style: TextStylesYGT.columnHeadingTextStyle,
+          )
+        ],
+      ),
     );
   }
 }
