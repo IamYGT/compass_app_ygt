@@ -1,3 +1,5 @@
+import 'package:compass_app_ygt/utilies/Texts.dart';
+import 'package:compass_app_ygt/utilies/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_compass/flutter_compass.dart';
 
@@ -21,8 +23,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: ,
-        // body: ,
-        );
+      backgroundColor: ColorsYGT.black,
+      appBar: AppBar(
+        title: TextsYGT.homeScreenAppBarTitle,
+      ),
+      // body: ,
+    );
   }
 }

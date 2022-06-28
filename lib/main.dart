@@ -1,4 +1,5 @@
 import 'package:compass_app_ygt/screens/home_screen.dart';
+import 'package:compass_app_ygt/utilies/styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        appBarTheme:const AppBarTheme(
+          backgroundColor: ColorsYGT.black,
+          centerTitle: true
+        )
       ),
       home: HomeScreen(),
     );
