@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: TextsYGT.homeScreenAppBarTitle,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
