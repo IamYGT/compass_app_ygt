@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:compass_app_ygt/utilies/sizes.dart';
 import 'package:compass_app_ygt/utilies/texts.dart';
 import 'package:compass_app_ygt/utilies/styles.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +9,7 @@ import 'package:flutter_compass/flutter_compass.dart';
 import '../utilies/text_styles.dart';
 
 class HomeScreen extends StatefulWidget {
- const HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -30,13 +33,27 @@ class _HomeScreenState extends State<HomeScreen> {
         title: TextsYGT.homeScreenAppBarTitle,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            '${heading!.ceil()}',
+            '${heading!.ceil()}°',
             style: TextStylesYGT.columnHeadingTextStyle,
-          )
+          ),
+          SizedBoxs.height50SizedBox,
+          Padding(
+            padding: PaddingValues.paddingSize18,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset("assets/images/cadrant.png"),
+                Transform.rotate(
+                  angle: ((heading ?? 0) * (pi / 180) * -1),
+                  child: Image.asset('assets/images/compass.png', scale: 1.1),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );

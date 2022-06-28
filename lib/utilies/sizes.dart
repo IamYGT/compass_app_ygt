@@ -7,3 +7,11 @@ class FontSizesYGT {
 class FontWeightYGT {
   static const bold = FontWeight.bold;
 }
+
+class PaddingValues {
+  static const paddingSize18 = EdgeInsets.all(18.0);
+}
+
+class SizedBoxs {
+  static const height50SizedBox = SizedBox(height: 50);
+}

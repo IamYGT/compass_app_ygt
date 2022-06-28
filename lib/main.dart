@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           centerTitle: true
         )
       ),
-      home:const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
